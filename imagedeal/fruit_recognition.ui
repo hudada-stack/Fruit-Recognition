@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1181</width>
+    <height>684</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="labelCapture">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>100</y>
+      <width>291</width>
+      <height>401</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>               原始图像</string>
+    </property>
+    <property name="margin">
+     <number>0</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelResult">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>130</y>
+      <width>291</width>
+      <height>341</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>              处理后图像</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>900</x>
+      <y>130</y>
+      <width>211</width>
+      <height>361</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QPushButton" name="pushButton_3">
+       <property name="text">
+        <string>读入图像</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton">
+       <property name="text">
+        <string>灰度化</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_6">
+       <property name="text">
+        <string>采样</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_4">
+       <property name="text">
+        <string>轮廓提取</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_5">
+       <property name="text">
+        <string>水果判断</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_7">
+       <property name="text">
+        <string>百度一下</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="text">
+        <string>退出</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>40</y>
+      <width>271</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; color:#ff5500;&quot;&gt;简易版水果识别&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1181</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources>
+  <include location="../image_deal/pics_ui.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>pushButton_3</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>btnReadImage_Clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>977</x>
+     <y>178</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>907</x>
+     <y>182</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>btnGray_Clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>925</x>
+     <y>240</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>825</x>
+     <y>322</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_6</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>btnCrop_Clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>964</x>
+     <y>284</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>861</x>
+     <y>428</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_4</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>btnOutline_Clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>991</x>
+     <y>338</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>834</x>
+     <y>505</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_5</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>btnRec_Clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>945</x>
+     <y>392</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>841</x>
+     <y>567</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_7</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>btnBaidu_Clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1021</x>
+     <y>433</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>882</x>
+     <y>622</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>btnOpenCamera_Clicked()</slot>
+  <slot>btnReadImage_Clicked()</slot>
+  <slot>btnGray_Clicked()</slot>
+  <slot>btnCrop_Clicked()</slot>
+  <slot>btnThreshold_Clicked()</slot>
+  <slot>btnOutline_Clicked()</slot>
+  <slot>btnRec_Clicked()</slot>
+  <slot>btnBaidu_Clicked()</slot>
+ </slots>
+</ui>

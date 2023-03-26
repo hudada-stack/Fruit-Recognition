@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="新前缀">
+    <file>source_imagedata/apple.png</file>
+    <file>source_imagedata/banana.png</file>
+  </qresource>
+</RCC>
